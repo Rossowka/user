@@ -1,0 +1,81 @@
+{
+    "users": [
+        {
+            "id": 1,
+            "firstName": "Scott",
+            "lastName": "Summers",
+            "userName": "cyclops",
+            "email": "scotty@company.com"
+        },
+        {
+            "id": 2,
+            "firstName": "Ororo",
+            "lastName": "Munroe",
+            "userName": "storm",
+            "email": "storm@company.com"
+        },
+        {
+            "id": 3,
+            "firstName": "Jean",
+            "lastName": "Grey",
+            "userName": "phoenix",
+            "email": "phoenix@company.com"
+        },
+        {
+            "id": 4,
+            "firstName": "Marie",
+            "lastName": "D'Ancanto",
+            "userName": "rogue",
+            "email": "rogue@company.com"
+        },
+        {
+            "id": 5,
+            "firstName": "Kitty",
+            "lastName": "Pryde",
+            "userName": "shadowcat",
+            "email": "kitty@company.com"
+        },
+        {
+            "id": 6,
+            "firstName": "Wade",
+            "lastName": "Wilson",
+            "userName": "deadpool",
+            "email": "poolboy@company.com"
+        },
+        {
+            "id": 7,
+            "firstName": "Kurt",
+            "lastName": "Wagner",
+            "userName": "nightcrawler",
+            "email": "blueguy@company.com"
+        },
+        {
+            "id": 8,
+            "firstName": "Erik",
+            "lastName": "Lehnsherr",
+            "userName": "magneto",
+            "email": "magneto@company.com"
+        },
+        {
+            "id": 9,
+            "firstName": "Raven",
+            "lastName": "Darkhölme",
+            "userName": "mystique",
+            "email": "raven@company.com"
+        },
+        {
+            "id": 10,
+            "firstName": "James",
+            "lastName": "Howlett",
+            "userName": "wolverine",
+            "email": "logan@company.com"
+        },
+        {
+            "id": 11,
+            "firstName": "Henry",
+            "lastName": "McCoy",
+            "userName": "beastie",
+            "email": "hank@company.com"
+        }
+    ]
+}
