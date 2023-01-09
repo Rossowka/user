@@ -15,9 +15,16 @@ function UserContainer() {
               }
               return response.json();
             })
-            .then((actualData) => console.log(actualData))
+            .then((actualData) => {
+                setData(actualData);
+                setError(null);
+            })
             .catch((err) => {
-                console.log(err.message);
+                setError(err.message);
+                setData(null);
+            })
+            .finally(() => {
+                setLoading(false);
             });
     }, []);
 
