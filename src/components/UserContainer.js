@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import UserList from './UserList';
 
 function UserContainer() {
     const [data, setData] = useState(null);
@@ -30,7 +31,12 @@ function UserContainer() {
 
     return (
         <>
-
+            <h2>User Container</h2>
+            {loading && <div>A moment please...</div>}
+            {error && (
+                <div>{`Data got lost on it's way... ${error}`}</div>
+            )}
+            <UserList users={data} />
         </>
     )
 }

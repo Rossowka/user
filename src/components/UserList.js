@@ -1,4 +1,4 @@
-function UserList() {
+function UserList({ data }) {
     return (
         <>
         
