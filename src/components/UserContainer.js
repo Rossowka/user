@@ -7,7 +7,8 @@ function UserContainer() {
 
     useEffect(() => {
         fetch('https://jsonplaceholder.typicode.com/users') // https://jsonplaceholder.typicode.com/users
-            .then((response) => console.log(response));
+            .then((response) => response.json())
+            .then((actualData) => console.log(actualData));
     }, []);
 
     return (
