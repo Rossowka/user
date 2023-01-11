@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import UserList from './UserList';
+import UserSearch from './UserSearch';
 
 function UserContainer() {
     const [data, setData] = useState(null);
@@ -7,36 +7,42 @@ function UserContainer() {
     const [error, setError] = useState(null);
 
     useEffect(() => {
-        fetch('https://jsonplaceholder.typicode.com/users') // https://jsonplaceholder.typicode.com/users
-            .then((response) => {
-                if (!response.ok) {
-                throw new Error(
-                  `This is an HTTP error: The status is ${response.status}`
+        const getData = async () => {
+            try {
+                const response = await fetch(
+                    'https://jsonplaceholder.typicode.com/users'
                 );
-              }
-              return response.json();
-            })
-            .then((actualData) => {
+                if (!response.ok) {
+                    throw new Error(
+                        `This is an HTTP error: The status is ${response.status}`
+                    );
+                }
+                let actualData = await response.json();
                 setData(actualData);
                 setError(null);
-            })
-            .catch((err) => {
+            } catch(err) {
                 setError(err.message);
                 setData(null);
-            })
-            .finally(() => {
+            } finally {
                 setLoading(false);
-            });
+            }
+        }
+        getData();
     }, []);
 
     return (
         <>
-            <h2>User Container</h2>
-            {loading && <div>A moment please...</div>}
+            <h2>User List</h2>
+            {loading &&
+                <div>A moment please...</div>
+                }
             {error && (
                 <div>{`Data got lost on it's way... ${error}`}</div>
-            )}
-            <UserList users={data} />
+                )}
+            {data &&
+            // makes sure data gets fetched before rendering the component
+                <UserSearch data={data} />
+                }
         </>
     )
 }
