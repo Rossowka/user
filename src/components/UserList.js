@@ -1,13 +1,15 @@
 import React from 'react';
+import User from './User';
 
 function UserList({ users }) {
     return (
-        <ul>
+        <ul >
             {users &&
-                users.map(({ id, username }) => (
-                    <li key={id}>
-                        #{id} | {username}
-                    </li>
+                users.map((user) => (
+                    <User
+                        key={user.id}
+                        user={user}
+                        />
                 ))}
         </ul>
     )
